@@ -5,7 +5,10 @@
 	"main": "server.js",
 	"scripts": {
 		"start": "node server.js",
-		"server": "nodemon server.js"
+		"server": "nodemon server.js",
+		"client": "npm start --prefix client",
+		"clientInstall": "npm install --prefix client",
+		"dev": "concurrently \"npm run server\" \"npm run client\" "
 	},
 	"author": "",
 	"license": "ISC",
@@ -20,5 +23,6 @@
 	"devDependencies": {
 		"concurrently": "^4.1.1",
 		"nodemon": "^1.19.1"
-	}
+	},
+	"proxy": "http://localhost:5000"
 }
