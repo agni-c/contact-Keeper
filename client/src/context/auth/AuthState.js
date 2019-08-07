@@ -33,7 +33,7 @@ const AuthState = props => {
 	const register = async formData => {
 		const config = {
 			headers: {
-				"content-type": "application/json"
+				"Content-Type": "application/json"
 			}
 		};
 		try {
